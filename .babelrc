@@ -14,7 +14,7 @@
   "plugins": ["react-hot-loader/babel"],
   "env": {
     "test": {
-      "presets": ["es2015", "react", "transform-async-to-generator"]
+      "presets": ["babel-preset-env", "stage-0", "react"]
     }
   }
 }
