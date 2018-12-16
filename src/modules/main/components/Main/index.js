@@ -12,7 +12,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     updateAppInfo: () => {
-      dispatch(updateAppInfo(Map({ test: '123' })))
+      dispatch(updateAppInfo(Map({ test: '1232' })))
     },
     logout: () => {
       // dispatch(logout())
