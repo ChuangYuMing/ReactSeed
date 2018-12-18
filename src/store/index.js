@@ -5,13 +5,11 @@ import storage from 'redux-persist/lib/storage'
 import thunk from 'redux-thunk'
 import reducers from '../reducers'
 import appGlobal from 'modules/common/app-global.js'
-import immutableTransform from 'redux-persist-transform-immutable'
 import rootEpic from '../epics.js'
 
 // const apiUrl = appGlobal.apiUrl
 let something = ''
 const persistConfig = {
-  transforms: [immutableTransform()],
   key: 'root',
   storage,
   whitelist: ['app']

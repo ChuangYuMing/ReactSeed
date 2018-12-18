@@ -42,11 +42,6 @@ module.exports = {
       chunkFilename: 'css/[id].css'
     }),
     new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.ProvidePlugin({
-      Map: ['immutable', 'Map'],
-      List: ['immutable', 'List'],
-      fromJS: ['immutable', 'fromJS']
-    }),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(false)
     })

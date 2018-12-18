@@ -1,6 +1,6 @@
 import * as types from './action-types'
 
-let init = Map({})
+let init = {}
 export default (state = init, action) => {
   switch (action.type) {
     case types.temp: {

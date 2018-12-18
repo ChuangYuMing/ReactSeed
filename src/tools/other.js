@@ -1,5 +1,4 @@
 import queryString from 'query-string'
-import { isImmutable } from 'immutable'
 import { getDateFromFormat, formatDate } from 'tools/date.js'
 
 function sleep(milliseconds) {

@@ -4,15 +4,15 @@ import { updateAppInfo } from 'modules/app/actions.js'
 
 const mapStateToProps = state => {
   return {
-    isLogin: state.app.get('isLogin'),
-    test: state.app.get('test')
+    isLogin: state.app.isLogin,
+    test: state.app.test
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     updateAppInfo: () => {
-      dispatch(updateAppInfo(Map({ test: '1232' })))
+      dispatch(updateAppInfo({ test: '1232' }))
     },
     logout: () => {
       // dispatch(logout())
