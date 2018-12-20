@@ -30,7 +30,6 @@ module.exports = {
       modules: path.resolve(__dirname, 'src/modules'),
       static: path.resolve(__dirname, 'src/static'),
       store: path.resolve(__dirname, 'src/store'),
-      tools: path.resolve(__dirname, 'src/tools'),
       api: path.resolve(__dirname, 'src/api')
     }
   },
