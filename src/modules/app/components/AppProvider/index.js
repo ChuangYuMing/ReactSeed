@@ -1,8 +1,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { PersistGate } from 'redux-persist/lib/integration/react'
-import { store, persistor } from 'store/index.js'
+import { store } from 'store/index.js'
 import { hot } from 'react-hot-loader'
 import App from '../App'
 

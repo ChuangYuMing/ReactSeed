@@ -3,9 +3,7 @@ import App from './App'
 import { withRouter } from 'react-router-dom'
 
 const mapStateToProps = state => {
-  return {
-    rehydrated: state._persist.rehydrated
-  }
+  return {}
 }
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {

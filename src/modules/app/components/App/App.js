@@ -16,19 +16,14 @@ class App extends React.PureComponent {
   componentDidMount() {}
   componentWillUnmount() {}
   render() {
-    let { rehydrated } = this.props
     // console.log('fetchApiUrl', fetchApiUrl)
-    if (!rehydrated) {
-      return <div />
-    } else {
-      return (
-        <div>
-          <Switch>
-            <Route exact path={'/'} component={Main} />
-          </Switch>
-        </div>
-      )
-    }
+    return (
+      <div>
+        <Switch>
+          <Route exact path={'/'} component={Main} />
+        </Switch>
+      </div>
+    )
   }
 }
 
