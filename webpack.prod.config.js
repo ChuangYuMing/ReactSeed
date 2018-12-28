@@ -17,7 +17,7 @@ module.exports = {
   mode: 'production',
   devtool: '#cheap-module-source-map',
   entry: {
-    app: ['babel-polyfill', 'whatwg-fetch', './src/index.js']
+    app: ['@babel/polyfill', './src/index.js']
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -87,7 +87,10 @@ module.exports = {
         exclude: /node_modules\/(?!(dom7|swiper)\/).*/,
         use: [
           {
-            loader: 'babel-loader'
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env', '@babel/preset-react']
+            }
           }
         ]
       },
@@ -99,7 +102,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              module: true,
+              modules: true,
               importLoaders: 1,
               sourceMap: true,
               localIdentName: '[name]_[local]_[hash:base64:5]',

@@ -13,11 +13,8 @@ module.exports = {
   mode: 'development',
   devtool: '#cheap-module-eval-source-map',
   entry: [
-    'babel-polyfill',
+    '@babel/polyfill',
     'react-hot-loader/patch',
-    // 'webpack-dev-server/client?http://0.0.0.0:8007',
-    // 'webpack/hot/only-dev-server',
-    'whatwg-fetch',
     './src/index.js'
   ],
   output: {
@@ -52,7 +49,10 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader'
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env', '@babel/preset-react']
+            }
           }
         ]
       },
@@ -64,7 +64,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              module: true,
+              modules: true,
               importLoaders: 1,
               sourceMap: true,
               localIdentName: '[name]_[local]_[hash:base64:5]'
