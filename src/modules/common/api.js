@@ -1,5 +1,4 @@
 import appGlobal from './app-global.js'
-import { store } from 'store/index.js'
 
 const callApi = (endpoint, config, url) => {
   if (!url) {
