@@ -71,14 +71,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(true)
-    }),
-    new CopyWebpackPlugin([
-      {
-        from: 'src/appConfig.js',
-        to: 'appConfig.js',
-        toType: 'file'
-      }
-    ])
+    })
   ],
   module: {
     rules: [
