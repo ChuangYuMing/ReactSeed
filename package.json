@@ -72,7 +72,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "stylelint 'src/**/*.css'"
+      "pre-commit": "stylelint 'src/**/*.css' --cache --cache-location './.stylelintcache/'"
     }
   },
   "scripts": {
