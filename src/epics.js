@@ -1,8 +1,3 @@
-import { combineEpics } from 'redux-observable'
-import main from 'modules/main'
+import { combineEpics } from 'redux-observable';
 
-let epics = [...Object.values(main.epics)]
-console.log(epics)
-const rootEpic = combineEpics.apply(undefined, epics)
-
-export default rootEpic
+export default combineEpics();

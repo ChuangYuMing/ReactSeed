@@ -8,7 +8,7 @@ import rootEpic from '../epics.js'
 let something = ''
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-const epicMiddleware = createEpicMiddleware(rootEpic)
+const epicMiddleware = createEpicMiddleware()
 
 const store = createStore(
   reducers,
@@ -16,5 +16,7 @@ const store = createStore(
     applyMiddleware(thunk.withExtraArgument(something), epicMiddleware)
   )
 )
+
+epicMiddleware.run(rootEpic);
 
 export { store }
