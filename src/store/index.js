@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import { createEpicMiddleware } from 'redux-observable'
 import thunk from 'redux-thunk'
-import reducers from '../reducers'
+import reducers from './reducers'
 import rootEpic from '../epics.js'
 
 // const apiUrl = appGlobal.apiUrl

@@ -1,9 +1,10 @@
 import React from 'react'
-import ReactDom from 'react-dom'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import { Route, Switch } from 'react-router-dom'
 import classNames from 'classnames/bind'
 import styles from './App.css'
-import Main from 'modules/main/components/Main'
+import Main from '../../../../modules/main/components/Main/Main'
 
 let cx = classNames.bind(styles)
 class App extends React.PureComponent {
@@ -12,10 +13,8 @@ class App extends React.PureComponent {
     this.haveload = false
   }
 
-  componentDidMount() {}
-  componentWillUnmount() {}
   render() {
-    // console.log('fetchApiUrl', fetchApiUrl)
+
     return (
       <div>
         <Switch>
@@ -26,4 +25,10 @@ class App extends React.PureComponent {
   }
 }
 
-export default App
+const mapStateToProps = state => {
+  return {}
+}
+export default withRouter(connect(
+  mapStateToProps
+)(App))
+

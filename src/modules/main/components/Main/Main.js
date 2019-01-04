@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { changeValueTest } from '../../../../store/reducers/test'
 import styles from './main.css'
 import classNames from 'classnames/bind'
 
@@ -7,14 +8,12 @@ let cx = classNames.bind(styles)
 class Main extends Component {
   constructor() {
     super()
-    this.state = {
-      hasLoadData: false
-    }
   }
 
   componentDidMount() {
+    const { changeValueTest } = this.props
     setTimeout(() => {
-      this.props.updateAppInfo()
+      changeValueTest({ testValue: 'test new value'})
     }, 2000)
   }
   componentWillUnmount() {}
@@ -24,6 +23,9 @@ class Main extends Component {
   }
 }
 
-Main.propTypes = {}
-
-export default Main
+export default connect(
+  (state) => ({
+    test: state.test.testValue,
+  }),
+  { changeValueTest }
+)(Main);
