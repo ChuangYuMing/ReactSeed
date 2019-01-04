@@ -11,7 +11,7 @@
         "ignoreAtRules": ["/regex/", "define-mixin"]
     }],
     "selector-pseudo-class-no-unknown": [true, {
-        ignorePseudoClasses: ["global"]
+        "ignorePseudoClasses": ["global"]
     }],
     "selector-attribute-quotes": ["always"],
     "color-hex-length": ["short"],
