@@ -1,7 +1,7 @@
 {
-  "name": "hongyuanzlda",
+  "name": "ReactSeed",
   "version": "1.0.0",
-  "description": "hongyuanzlda",
+  "description": "ReactSeed",
   "main": "index.js",
   "jest": {
     "setupFiles": [
@@ -63,8 +63,7 @@
     "regenerator-runtime": "0.10.5",
     "style-loader": "0.23.1",
     "stylelint": "^9.9.0",
-    "stylelint-config-standard": "^18.2.0",
-    "stylelint-order": "^2.0.0",
+    "stylelint-config-pixnet": "git+ssh://git@git.pixnet.work:f2e/stylelint-config-pixnet.git#master",
     "url-loader": "1.1.2",
     "webpack": "~4.28.0",
     "webpack-bundle-analyzer": "~3.0.3",
@@ -79,7 +78,8 @@
   "scripts": {
     "test": "jest",
     "dev": "NODE_ENV='development' webpack-dev-server --devtool eval --progress --colors --config=webpack.dev.config.js",
-    "build": "NODE_ENV='production' webpack --progress --colors --config=webpack.prod.config.js"
+    "build": "NODE_ENV='production' webpack --progress --colors --config=webpack.prod.config.js",
+    "csslint": "stylelint 'src/**/*.css'"
   },
   "author": "",
   "license": "ISC"
