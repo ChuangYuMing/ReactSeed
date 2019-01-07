@@ -1,5 +1,8 @@
 {
   "extends": "stylelint-config-pixnet",
+  "ignoreFiles": [
+    "./src/modules/shared/styles/base/_normalize.css"
+  ],
   "rules": {
     "at-rule-no-unknown": [true, {
         "ignoreAtRules": ["/regex/", "define-mixin"]
