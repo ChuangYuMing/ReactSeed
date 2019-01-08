@@ -72,14 +72,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "stylelint 'src/**/*.css' --cache --cache-location './.stylelintcache/'"
+      "pre-commit": "npm run csslint"
     }
   },
   "scripts": {
     "test": "jest",
     "dev": "NODE_ENV='development' webpack-dev-server --devtool eval --progress --colors --config=webpack.dev.config.js",
     "build": "NODE_ENV='production' webpack --progress --colors --config=webpack.prod.config.js",
-    "csslint": "stylelint 'src/**/*.css'"
+    "csslint": "stylelint 'src/**/*.css' --cache --cache-location './.stylelintcache/'"
   },
   "author": "",
   "license": "ISC"
