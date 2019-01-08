@@ -20,9 +20,9 @@ module.exports = {
     app: ['@babel/polyfill', './src/index.js']
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].[contenthash:8].js',
-    chunkFilename: 'js/[name].[contenthash:8].js',
+    path: path.resolve(__dirname, 'build'),
+    filename: 'static/js/[name].[contenthash:8].js',
+    chunkFilename: 'static/js/[name].[contenthash:8].js',
     publicPath: '/'
   },
   resolve: {
@@ -56,11 +56,11 @@ module.exports = {
     }
   },
   plugins: [
-    new BundleAnalyzerPlugin(),
-    new CleanWebpackPlugin(['dist']),
+    // new BundleAnalyzerPlugin(),
+    new CleanWebpackPlugin(['build']),
     new MiniCssExtractPlugin({
-      filename: 'css/main.[contenthash:8].css',
-      chunkFilename: 'css/[id].[contenthash:8].css'
+      filename: 'static/css/main.[contenthash:8].css',
+      chunkFilename: 'static/css/[id].[contenthash:8].css'
     }),
     new HtmlWebpackPlugin({
       template: 'index.template.html'
@@ -98,8 +98,7 @@ module.exports = {
               modules: true,
               importLoaders: 1,
               sourceMap: true,
-              localIdentName: '[name]_[local]_[hash:base64:5]',
-              minimize: true
+              localIdentName: '[name]_[local]_[hash:base64:5]'
             }
           },
           {
@@ -123,7 +122,11 @@ module.exports = {
       },
       {
         test: /\.(png|jpg)$/,
-        loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'
+        loader: 'url-loader',
+        options: {
+          name: 'static/images/[name].[ext]',
+          limit: 8192
+        }
       },
       { test: /\.html$/, loader: 'html-loader' },
       {
@@ -132,7 +135,6 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 10000,
               mimetype: 'application/font-woff'
             }
           }
@@ -140,7 +142,7 @@ module.exports = {
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: [{ loader: 'file-loader' }]
+        use: [{ loader: 'url-loader' }]
       }
     ]
   }

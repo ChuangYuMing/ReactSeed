@@ -91,7 +91,11 @@ module.exports = {
       },
       {
         test: /\.(png|jpg)$/,
-        loader: 'url-loader?limit=8192&name=images/[name].[ext]'
+        loader: 'url-loader',
+        options: {
+          name: 'images/[name].[ext]',
+          limit: 8192
+        }
       },
       { test: /\.html$/, loader: 'html-loader' },
       {
@@ -100,7 +104,6 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 10000,
               mimetype: 'application/font-woff'
             }
           }
@@ -108,7 +111,7 @@ module.exports = {
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: [{ loader: 'file-loader' }]
+        use: [{ loader: 'url-loader' }]
       }
     ]
   },

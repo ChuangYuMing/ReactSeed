@@ -1,3 +1,7 @@
 @import 'normalize.css';
 @import 'helpers/_mixins.css';
 @import 'base/_base.css';
+
+.background-test {
+    background-image: url("../../../../assets/images/testimg.png");
+}

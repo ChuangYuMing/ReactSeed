@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom'
 import classNames from 'classnames/bind'
 import styles from './App.css'
 import Main from '../../../../modules/main/components/Main/Main'
+import backgroundTest from '../../../../assets/images/testimg.png'
 
 let cx = classNames.bind(styles)
 class App extends React.PureComponent {
@@ -16,7 +17,8 @@ class App extends React.PureComponent {
   render() {
 
     return (
-      <div>
+      <div className={styles['background-test']}>
+        <img src={backgroundTest} alt="backgroundTest"/>
         <Switch>
           <Route exact path={'/'} component={Main} />
         </Switch>
