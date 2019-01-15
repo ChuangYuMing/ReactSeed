@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom'
 import classNames from 'classnames/bind'
 import styles from './App.css'
 import Main from '../Main/Main'
-import backgroundTest from '../../../../assets/images/testimg.png'
+import backgroundTest from '../../assets/images/testimg.png'
 
 let cx = classNames.bind(styles)
 class App extends React.PureComponent {

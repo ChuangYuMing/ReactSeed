@@ -1,4 +1,4 @@
-@import 'helpers/_variables.css';
+@import '../helpers/_variables.css';
 
 html {
     font-size: $base-font-size;
