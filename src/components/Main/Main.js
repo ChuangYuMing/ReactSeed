@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { changeValueTest } from '../../../../store/reducers/test'
+import { changeValueTest } from '../../store/reducers/test'
 import styles from './main.css'
 import classNames from 'classnames/bind'
 

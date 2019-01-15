@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 import { Route, Switch } from 'react-router-dom'
 import classNames from 'classnames/bind'
 import styles from './App.css'
-import Main from '../../../../modules/main/components/Main/Main'
+import Main from '../Main/Main'
 import backgroundTest from '../../../../assets/images/testimg.png'
 
 let cx = classNames.bind(styles)
